@@ -1,0 +1,27 @@
+body{
+    background-image: url(../img/fondo_azul.png);
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+form{
+    background: rgba(20, 93, 115, 0.48);
+    color: white;
+    padding: 30px;
+    margin-top: 60px;
+    margin-left: 40px;
+    padding-bottom: 60px;
+    box-shadow: 10px 10px 5px rgba(6,1,1,0.43);
+}
+.form-control{
+    border-radius: 3px;
+    background-color: rgba(16, 80, 95, 0.55);
+    color: white;
+    border-radius: 1px solid #291212;
+}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px rgba(6, 88, 146, 0.6) inset; }
+.btn{
+    background: rgba(12, 122, 148, 0.87);
+}
