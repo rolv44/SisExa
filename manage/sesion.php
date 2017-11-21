@@ -17,7 +17,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-sm-offset-3 ">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 ">
                 <form action="" autocomplete="on">
                     <h2 align="center">INICIAR SESION</h2>
                     <div class="form-group">
@@ -37,6 +37,12 @@
                     
                 </form>
             </div>
+        </div>
+        <br>
+        <div class="form-links text-center">
+          <p class="">
+            <a href="../index.php">Cancelar</a>
+          </p>
         </div>
     </div>
 </body>

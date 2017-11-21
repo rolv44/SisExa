@@ -1,5 +1,6 @@
 
 <?php include_once"diseño/cabecera.php";?>
+
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->

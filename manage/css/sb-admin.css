@@ -3,6 +3,9 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/master/LICENSE)
  */
+ .nav-config{
+ background-color: rgb(16, 24, 54);
+ }
 html {
   position: relative;
   min-height: 100%; }
@@ -168,7 +171,7 @@ body.fixed-nav {
         padding: 1em; } }
 
 #mainNav.fixed-top.navbar-dark .sidenav-toggler {
-  background-color: #212529; }
+  background-color: rgb(16, 24, 54); }
   #mainNav.fixed-top.navbar-dark .sidenav-toggler a i {
     color: #adb5bd; }
 
@@ -260,7 +263,8 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 
 @media (min-width: 992px) {
   #mainNav.navbar-dark .navbar-collapse .navbar-sidenav {
-    background: #343a40; }
+  /*modifica el color de la barra de navecion*/
+    background: rgb(16, 24, 54); }
     #mainNav.navbar-dark .navbar-collapse .navbar-sidenav li.active a {
       color: white !important;
       background-color: #495057; }
