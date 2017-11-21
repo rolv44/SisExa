@@ -20,7 +20,7 @@ function validar(){
             if(cont>0){
                if(valor[0].nombre==nombre){
                $(".alert").hide();
-               location.href="dashboard.php";
+               location.href="index.html";
                }
                }else{
                    $(".alert").show();

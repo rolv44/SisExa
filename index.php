@@ -93,15 +93,11 @@
       
     </div>
     <div class="footer">
-      <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
+    <div class="frame container">
+      <a class="" href="#">
         Todos los derechos reservados
       </a>
     </div>
-  </div>
-</nav>
     </div>
   </body>
 </html>
