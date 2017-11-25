@@ -1,3 +1,28 @@
+<?php
+$tipo=$_GET['id'];
+
+if($tipo=="A-I"){
+  $veh="M1, M2 y N1";
+}elseif ($tipo=="BII-A") {
+  $veh="L1, L2";
+}elseif ($tipo=="BII-B") {
+  $veh="L3, L4";
+}elseif ($tipo=="AII-A") {
+  $veh="M1 - SERVICIO DE TRANSPORTE";
+}elseif ($tipo=="AII-B") {
+  $veh="M2, M3 y N2";
+}elseif ($tipo=="AIII-A") {
+  $veh="M3 > 6T";
+}elseif ($tipo=="AIII-B") {
+  $veh="N3";
+}elseif ($tipo=="AIII-C") {
+  $veh="M3 y N3";
+}elseif ($tipo=="BII-C") {
+  $veh="L5";
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -20,14 +45,14 @@
                  <span class="icon-bar"></span>
                  <span class="icon-bar"></span>
                  </button>
-      <a class="navbar-brand" href="">Simulador</a>
+      
     </div>
     <div class="collapse navbar-collapse" id="navbar-1">  
       <ul class="nav navbar-nav navbar-left">
         <img class="img-responsive" src="../img/minp.png" width="150" height="40" alt="Ministerio del Perú">
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li role="presentation"><a href="#">BIENVENIDO: DEMO</a></li> 
+        <li role="presentation"><a href="#"><h4>BIENVENIDO: DEMO</h4></a></li> 
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -35,7 +60,7 @@
 </header>
 <div class="hora container-fluid">
   <div class="frame-hora">
-    <h2 id="timer">Tiempo Restante: 0:0</h2>
+    <h2 id="timer" align="center">Tiempo Restante: 0:0</h2>
   </div>
 </div>
 <br>
@@ -44,8 +69,9 @@
 <br>
 <div class="container panels">
   <div class="row">
-    <div class="col-xs-12">
-      <h4 align="center">EVALUACION DE CONOCIMIENTOS EN LA CONDUCCION PARA POSTULANTES A LICENCIAS DE CONDUCIR DE CLASE </h4>
+    <div class="tit col-xs-12 col-sm-12 col-md-8 col-lg-10 col-lg-offset-1">
+      <h4 align="center">EVALUACION DE CONOCIMIENTOS EN LA CONDUCCION PARA
+         POSTULANTES A LICENCIAS DE CONDUCIR DE CLASE <?=$tipo?> (VEHÍCULOS DE LA CATEGORÍA <?=$veh?> )</h4>
     </div>
   </div>
 </div>
@@ -100,7 +126,7 @@ window.onload=function(){
         
     });
     for(var i=0;i<40;i++){
-      ss='<div class="row fila'+String(i)+'"><div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 col-lg-offset-1">'
+      ss='<div class="row fila'+String(i)+'"><div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2">'
       +'<div class="panel panel-default">  <div class="panel-body">    Basic panel example  </div> </div>'
       +'</div></div>';
       $(".panels").append(ss);

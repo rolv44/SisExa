@@ -272,7 +272,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
         color: white; }
     #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
     #mainNav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
-      background: #343a40; } }
+      background: #050f42 } }
 
 #mainNav.navbar-light .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
   color: rgba(0, 0, 0, 0.5); }

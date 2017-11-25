@@ -33,6 +33,20 @@
             <span class="nav-link-text">Panel de Control</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Usuarios">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Usuarios</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseComponents">
+            <li>
+              <a href="#" id="verU"><i class="fa fa-fw fa-eye"></i>Ver Usuarios</a>
+            </li>
+            <li>
+              <a href="#" id="regU"><i class="fa fa-fw fa-pencil"></i>Registrar Usuario</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gráficos">
           <a class="nav-link" href="graficos.php">
             <i class="fa fa-fw fa-area-chart"></i>
@@ -45,6 +59,7 @@
             <span class="nav-link-text">Tablas</span>
           </a>
         </li>
+        
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Herramientas">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
@@ -125,7 +140,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
+      <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-envelope"></i>
             <span class="d-lg-none">Mensajes
@@ -133,7 +148,7 @@
             </span>
             <span class="indicator text-primary d-none d-lg-block">
               <i class="fa fa-fw fa-circle"></i>
-            </span>
+            </span> 
           </a>
           <div class="dropdown-menu" aria-labelledby="messagesDropdown">
             <h6 class="dropdown-header">Mensajes Nuevos:</h6>
@@ -214,6 +229,7 @@
             </div>
           </form>
         </li>
+      -->
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Cerrar Sesion</a>

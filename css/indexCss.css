@@ -10,60 +10,45 @@ body {
 .sheet {
   position: relative;
   top: 90px;
-  left: 3%;
-  width: 95%;
-  height: 1000px;
+  padding-top: 40px;
+  
   background-color: rgb(243, 245, 233);
   font-family: sans-serif;
   border-radius: 5px;
+  margin-bottom: 100px;
 }
-
-/*
-.header .navbar-nav li a {
-    line-height: 100px;
-    height: 90px;
-    padding-top: 0;
-} */
-
+.ulin h4{
+color: rgb(255, 255, 255);
+}
+.ulin h4:hover{
+color: rgb(208, 29, 121);
+}
+.btnc{
+margin: 1px;
+}
 .navbar-default {
   background-color: rgb(16, 24, 54);
 }
-
-p {
-  text-align: justify;
-  font-family: serif;
+#tit{
+text-align: center;
 }
-
 strong, #p1 {
   font-size: 25px;
   text-align: justify;
   font-family: serif;
 }
 
-.sh {
-  width: 85%;
-}
-
 .footer {
   width: 100%;
-  height: 80px;
+  height: 100px;
   background: #333;
   border-top: 1px solid #000;
-  position: absolute;
-  top:1100px;
-}
-
-.hora {
   position: relative;
-  top: 65px;
-  height: 80px;
-  background-color: rgb(243, 245, 233);
-  color: rgb(231, 52, 21);
-  font-family: sans-serif;
   
-  /*border-radius: 5px; */
 }
-
+.footer h4{
+color: rgb(121, 128, 195);
+}
 .frame {
   background-color: rgb(16, 24, 54);
   position: relative;

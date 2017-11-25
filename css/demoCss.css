@@ -17,14 +17,12 @@ body {
   font-family: sans-serif;
   border-radius: 5px;
 }
-
-/*
-.header .navbar-nav li a {
-    line-height: 100px;
-    height: 90px;
-    padding-top: 0;
-} */
-
+.ulin h4{
+color: rgb(255, 255, 255);
+}
+.ulin h4:hover{
+color: rgb(208, 29, 121);
+}
 .navbar-default {
   background-color: rgb(16, 24, 54);
 }
@@ -71,3 +69,10 @@ strong, #p1 {
   width: 100%;
   height: 50px;
 }
+.tit{
+margin-bottom: 20px;
+}
+.tit h4{
+font-size: 20px;
+}
+

@@ -1,21 +1,21 @@
 
-<?php include_once"diseño/cabecera.php"; ?>
-  <div class="content-wrapper">
+<!-- include_once"diseño/cabecera.php"; -->
+  <div class="content-wrapper rapero-usu">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="#">Dashboard</a>
+          <a href="#">Panel de Control</a>
         </li>
-        <li class="breadcrumb-item active">Tables</li>
+        <li class="breadcrumb-item active">Tablas</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Data Table Example</div>
         <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <div class="table-responsive ewq">
+            <table class="table table-bordered" id="tablaUsu0" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -496,24 +496,29 @@
               </tbody>
             </table>
           </div>
+          <div class="table-responsive">
+            <?php include"tablas/tablaUsuario.php";?>
+          </div>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
-    <?php include_once"diseño/pie.php";?>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
+    
   </div>
+  <!--
 </body>
 
 </html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#verU").click(function(){
+      $(".qwe").hide(2000);
+    });
+    $("#regU").click(function(){
+      $(".ewq").hide(2000);
+    });
+    
+  });
+</script>
+-->
+

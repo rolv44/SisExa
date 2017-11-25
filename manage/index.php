@@ -1,7 +1,7 @@
 
 <?php include_once"diseño/cabecera.php";?>
 
-  <div class="content-wrapper">
+  <div class="content-wrapper rapero-panel">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
@@ -873,6 +873,41 @@
     <script src="js/sb-admin-datatables.min.js"></script>
     <script src="js/sb-admin-charts.min.js"></script>
   </div>
+  
+  <?php include"usuario.php";?>
 </body>
 
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".rapero-usu").hide();
+    
+    $("#verU").click(function(){
+      if ($(".rapero-panel").is(":visible")) {
+        $(".rapero-panel").hide();
+        $(".rapero-usu").show(2000);
+      }
+      if ($(".ewq").is(":hidden")) {
+        $(".ewq").show(2000);
+      }
+      $(".qwe").hide(2000);
+      
+    });
+    
+    $("#regU").click(function(){
+      if ($(".rapero-panel").is(":visible")) {
+        $(".rapero-panel").hide();
+        $(".rapero-usu").show(2000);
+      }
+      if ($(".ewq").is(":visible")) {
+        $(".ewq").hide(2000);
+      }
+      $(".qwe").show(2000);
+      
+    });
+    
+  });
+  
+</script>
+

@@ -20,15 +20,15 @@
                    <span class="icon-bar"></span>
                    <span class="icon-bar"></span>
                    </button>
-        <a class="navbar-brand" href="">Simulador</a>
+        <!--<a class="navbar-brand" href="">Simulador</a> -->
       </div>
       <div class="collapse navbar-collapse" id="navbar-1">  
         <ul class="nav navbar-nav navbar-left">
           <img class="img-responsive" src="img/minp.png" width="150" height="40" alt="Ministerio del Perú">
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li role="presentation"><a href="#">BIENVENIDO: DEMO</a></li> 
-          <li role="presentation"><a href="manage/sesion.php">ACCEDER</a></li>
+        <ul class="nav navbar-nav navbar-right ulin" >
+          <li role="presentation"><a href="#"><h4>BIENVENIDO: DEMO</h4></a></li> 
+          <li role="presentation"><a href="manage/sesion.php"><h4>ACCEDER</h4></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -37,16 +37,18 @@
       
       <div class="container">
              <div class="row">
-               <div class="col-xs-12 col-sm-12 col-md-12">
-                 
-            <div class="sheet">
-              <div class="container sh">
+               <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-lg-offset-1">
+            <div class="sheet"> 
+              
+              <div class="container-fluid">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg">
-                <h3><strong>SIMULACRO DE PREGUNTAS PARA LA EVALUACIÓN DE 
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+                <h3 id="tit"><strong>SIMULACRO DE PREGUNTAS PARA LA EVALUACIÓN DE 
                   CONOCIMIENTOS EN LA CONDUCCIÓN PARA POSTULANTES A LICENCIAS DE CONDUCIR</strong></h3>
+                  <br>
                 <strong>Estimados Usuarios:</strong>
-                
+                <br>
+                <br>
                    <p id="p1">
           Ante todo felicitarlos por ingresar a nuestro simulador de entrenamiento. El examen contiene 40 preguntas y tiene una duración de 40 minutos, y para su aprobación, el postulante deberá de acertar por lo menos treinta y cinco (35) respuestas de las cuarenta (40) preguntas. Es importante realizar este examen en completo silencio para evitar distracciones.
           Los componentes de este examen son temas de: Obligaciones del Conductor en materia de tránsito, Inspección Técnica Vehicular, Reglamento Nacional de Vehículos, Reglamento Nacional de Responsabilidad Civil y Seguros Obligatorios de Accidentes de Tránsito, Reglamento de Placa Única Nacional de Rodaje y Primeros Auxilios, en caso de accidentes de tránsito.
@@ -54,49 +56,53 @@
           El examen estará activo las 24 horas para que puedan resolver la prueba de conocimientos, según la categoría a la que postulan. Acabada la prueba, los resultados se podrán visualizar.
           Selecciona la categoria a postular: </p>
               </div>
-              
+              </div>
             </div>
-            <div class="row">
-                  <div class="btn-toolbar" role="toolbar" aria-label="...">
-                    <div class="col-xs-12">
-            <div class="btn-group" role="group" aria-label="...">
-              <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria A-I',1)" data-toggle="modal" data-target="#adv1">Categoria A-I</button>
-              <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-A',2)" data-toggle="modal" data-target="#adv1">Categoria BII-A</button>
-              <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-B',3)" data-toggle="modal" data-target="#adv1">Categoria BII-B</button>
-              <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AII-A',4)" data-toggle="modal" data-target="#adv1">Categoria AII-A</button>
-            </div>
+            <div class="container-fluid">
+              <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2">
+                      <div class="btn-toolbar" role="toolbar" aria-label="...">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-11 btnc">
+                <div class="btn-group" role="group" aria-label="...">
+                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria A-I',1)" data-toggle="modal" data-target="#adv1">Categoria A-I</button>
+                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-A',2)" data-toggle="modal" data-target="#adv1">Categoria BII-A</button>
+                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-B',3)" data-toggle="modal" data-target="#adv1">Categoria BII-B</button>
+                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AII-A',4)" data-toggle="modal" data-target="#adv1">Categoria AII-A</button>
+                </div>
+                </div>
+                <br>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-11 btnc">
+                  <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AII-B',5)" data-toggle="modal" data-target="#adv1">Categoria AII-B</button>
+                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-A',6)" data-toggle="modal" data-target="#adv1">Categoria AIII-A</button>
+                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-B',7)" data-toggle="modal" data-target="#adv1">Categoria AIII-B</button>
+                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-C',8)" data-toggle="modal" data-target="#adv1">Categoria AIII-C</button>
+                  </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-11 btnc">
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-C',9)" data-toggle="modal" data-target="#adv1">Categoria BII-C</button>
+                    
+                </div>
+              </div>
+                    </div>
+                    </div>
+              </div>
             </div>
             <br>
-            <div class="col-xs-12">
-              <div class="btn-group" role="group" aria-label="...">
-                <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AII-B',5)" data-toggle="modal" data-target="#adv1">Categoria AII-B</button>
-                <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-A',6)" data-toggle="modal" data-target="#adv1">Categoria AIII-A</button>
-                <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-B',7)" data-toggle="modal" data-target="#adv1">Categoria AIII-B</button>
-                <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-C',8)" data-toggle="modal" data-target="#adv1">Categoria AIII-C</button>
-              </div>
-              </div>
-              <div class="col-xs-12">
-                <div class="btn-group" role="group" aria-label="...">
-                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-C',9)" data-toggle="modal" data-target="#adv1">Categoria BII-C</button>
-                
-            </div>
-          </div>
-                </div>
-            </div>
-          </div>
-          
         </div>
         </div>
         </div>
+        <?php include"modal.php";?>
       </div>
-      <?php include"modal.php";?>
       
     </div>
+    
     <div class="footer">
     <div class="frame container">
-      <a class="" href="#">
-        Todos los derechos reservados
-      </a>
+       
+        <h4 align="center">Todos los derechos reservados</h4>
+      
     </div>
     </div>
   </body>
@@ -104,6 +110,7 @@
 <script type="text/javascript">
   function tipoEx(tipo,num){
     document.getElementById('tt1').innerHTML="¿Está seguro que desea comenzar el simulacro | "+tipo+" ?";
-    document.getElementById('rdr1').href="demo/demo.php?id="+num;
+    var tt=tipo.substr(10);
+    document.getElementById('rdr1').href="demo/demo.php?id="+tt;
   }
 </script>
