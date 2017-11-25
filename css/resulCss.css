@@ -9,13 +9,14 @@ body {
 
 .sheet {
   position: relative;
-  top: 90px;
+  top: 100px;
   left: 3%;
   width: 95%;
   height: 1000px;
   background-color: rgb(243, 245, 233);
   font-family: sans-serif;
   border-radius: 5px;
+  margin-bottom: 150px;
 }
 .ulin h4{
 color: rgb(255, 255, 255);
@@ -44,7 +45,7 @@ strong, #p1 {
 
 .footer {
   width: 100%;
-  height: 80px;
+  height: 100px;
   background: #333;
   border-top: 1px solid #000;
   position: relative;
