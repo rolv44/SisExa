@@ -633,222 +633,6 @@
                   <td>2011/08/14</td>
                   <td>$163,000</td>
                 </tr>
-                <tr>
-                  <td>Michelle House</td>
-                  <td>Integration Specialist</td>
-                  <td>Sidney</td>
-                  <td>37</td>
-                  <td>2011/06/02</td>
-                  <td>$95,400</td>
-                </tr>
-                <tr>
-                  <td>Suki Burks</td>
-                  <td>Developer</td>
-                  <td>London</td>
-                  <td>53</td>
-                  <td>2009/10/22</td>
-                  <td>$114,500</td>
-                </tr>
-                <tr>
-                  <td>Prescott Bartlett</td>
-                  <td>Technical Author</td>
-                  <td>London</td>
-                  <td>27</td>
-                  <td>2011/05/07</td>
-                  <td>$145,000</td>
-                </tr>
-                <tr>
-                  <td>Gavin Cortez</td>
-                  <td>Team Leader</td>
-                  <td>San Francisco</td>
-                  <td>22</td>
-                  <td>2008/10/26</td>
-                  <td>$235,500</td>
-                </tr>
-                <tr>
-                  <td>Martena Mccray</td>
-                  <td>Post-Sales support</td>
-                  <td>Edinburgh</td>
-                  <td>46</td>
-                  <td>2011/03/09</td>
-                  <td>$324,050</td>
-                </tr>
-                <tr>
-                  <td>Unity Butler</td>
-                  <td>Marketing Designer</td>
-                  <td>San Francisco</td>
-                  <td>47</td>
-                  <td>2009/12/09</td>
-                  <td>$85,675</td>
-                </tr>
-                <tr>
-                  <td>Howard Hatfield</td>
-                  <td>Office Manager</td>
-                  <td>San Francisco</td>
-                  <td>51</td>
-                  <td>2008/12/16</td>
-                  <td>$164,500</td>
-                </tr>
-                <tr>
-                  <td>Hope Fuentes</td>
-                  <td>Secretary</td>
-                  <td>San Francisco</td>
-                  <td>41</td>
-                  <td>2010/02/12</td>
-                  <td>$109,850</td>
-                </tr>
-                <tr>
-                  <td>Vivian Harrell</td>
-                  <td>Financial Controller</td>
-                  <td>San Francisco</td>
-                  <td>62</td>
-                  <td>2009/02/14</td>
-                  <td>$452,500</td>
-                </tr>
-                <tr>
-                  <td>Timothy Mooney</td>
-                  <td>Office Manager</td>
-                  <td>London</td>
-                  <td>37</td>
-                  <td>2008/12/11</td>
-                  <td>$136,200</td>
-                </tr>
-                <tr>
-                  <td>Jackson Bradshaw</td>
-                  <td>Director</td>
-                  <td>New York</td>
-                  <td>65</td>
-                  <td>2008/09/26</td>
-                  <td>$645,750</td>
-                </tr>
-                <tr>
-                  <td>Olivia Liang</td>
-                  <td>Support Engineer</td>
-                  <td>Singapore</td>
-                  <td>64</td>
-                  <td>2011/02/03</td>
-                  <td>$234,500</td>
-                </tr>
-                <tr>
-                  <td>Bruno Nash</td>
-                  <td>Software Engineer</td>
-                  <td>London</td>
-                  <td>38</td>
-                  <td>2011/05/03</td>
-                  <td>$163,500</td>
-                </tr>
-                <tr>
-                  <td>Sakura Yamamoto</td>
-                  <td>Support Engineer</td>
-                  <td>Tokyo</td>
-                  <td>37</td>
-                  <td>2009/08/19</td>
-                  <td>$139,575</td>
-                </tr>
-                <tr>
-                  <td>Thor Walton</td>
-                  <td>Developer</td>
-                  <td>New York</td>
-                  <td>61</td>
-                  <td>2013/08/11</td>
-                  <td>$98,540</td>
-                </tr>
-                <tr>
-                  <td>Finn Camacho</td>
-                  <td>Support Engineer</td>
-                  <td>San Francisco</td>
-                  <td>47</td>
-                  <td>2009/07/07</td>
-                  <td>$87,500</td>
-                </tr>
-                <tr>
-                  <td>Serge Baldwin</td>
-                  <td>Data Coordinator</td>
-                  <td>Singapore</td>
-                  <td>64</td>
-                  <td>2012/04/09</td>
-                  <td>$138,575</td>
-                </tr>
-                <tr>
-                  <td>Zenaida Frank</td>
-                  <td>Software Engineer</td>
-                  <td>New York</td>
-                  <td>63</td>
-                  <td>2010/01/04</td>
-                  <td>$125,250</td>
-                </tr>
-                <tr>
-                  <td>Zorita Serrano</td>
-                  <td>Software Engineer</td>
-                  <td>San Francisco</td>
-                  <td>56</td>
-                  <td>2012/06/01</td>
-                  <td>$115,000</td>
-                </tr>
-                <tr>
-                  <td>Jennifer Acosta</td>
-                  <td>Junior Javascript Developer</td>
-                  <td>Edinburgh</td>
-                  <td>43</td>
-                  <td>2013/02/01</td>
-                  <td>$75,650</td>
-                </tr>
-                <tr>
-                  <td>Cara Stevens</td>
-                  <td>Sales Assistant</td>
-                  <td>New York</td>
-                  <td>46</td>
-                  <td>2011/12/06</td>
-                  <td>$145,600</td>
-                </tr>
-                <tr>
-                  <td>Hermione Butler</td>
-                  <td>Regional Director</td>
-                  <td>London</td>
-                  <td>47</td>
-                  <td>2011/03/21</td>
-                  <td>$356,250</td>
-                </tr>
-                <tr>
-                  <td>Lael Greer</td>
-                  <td>Systems Administrator</td>
-                  <td>London</td>
-                  <td>21</td>
-                  <td>2009/02/27</td>
-                  <td>$103,500</td>
-                </tr>
-                <tr>
-                  <td>Jonas Alexander</td>
-                  <td>Developer</td>
-                  <td>San Francisco</td>
-                  <td>30</td>
-                  <td>2010/07/14</td>
-                  <td>$86,500</td>
-                </tr>
-                <tr>
-                  <td>Shad Decker</td>
-                  <td>Regional Director</td>
-                  <td>Edinburgh</td>
-                  <td>51</td>
-                  <td>2008/11/13</td>
-                  <td>$183,000</td>
-                </tr>
-                <tr>
-                  <td>Michael Bruce</td>
-                  <td>Javascript Developer</td>
-                  <td>Singapore</td>
-                  <td>29</td>
-                  <td>2011/06/27</td>
-                  <td>$183,000</td>
-                </tr>
-                <tr>
-                  <td>Donna Snider</td>
-                  <td>Customer Support</td>
-                  <td>New York</td>
-                  <td>27</td>
-                  <td>2011/01/25</td>
-                  <td>$112,000</td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -875,6 +659,11 @@
   </div>
   
   <?php include"usuario.php";?>
+  <?php include"importar.php";?>
+  <?php include"categoria.php";?>
+  <?php include"tema.php";?>
+  <?php include"pregunta.php";?>
+  <?php include"alternativa.php";?>
 </body>
 
 </html>
@@ -882,12 +671,159 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $(".rapero-usu").hide();
+    $(".rapero-imp").hide();
+    $(".rapero-cate").hide();
+    $(".rapero-tema").hide();
+    
+    $("#regT").click(function(){
+      if(!$(".rapero-tema").hasClass("bg-dark")){
+        $(".rapero-tema").toggleClass("bg-dark");
+      }
+      /*
+      $("#temaCat").empty();
+      $.ajax({
+    type:'POST',
+    url:'ajax/traeCatJson.php',
+    dataType:'json',
+    success:function(datos){
+        var val=eval(datos);
+        var con=0;
+        for(var i in val){
+            con++;
+        }
+        
+    var i=0;  
+        while(i<con){ 
+        $("#temaCat").append("<option value='"+val[i].id+"'>"+val[i].descripcion+"</option>");
+     i++; 
+        }
+        
+    }
+});*/
+      $("div[class*='rapero']").hide();
+      $(".rapero-tema").show(2000);
+      $(".rT").show();
+      $(".vT").hide();
+    });
+    
+    $("#regP").click(function(){
+      if(!$(".rapero-preg").hasClass("bg-dark")){
+        $(".rapero-preg").toggleClass("bg-dark");
+      }
+      
+      $("#CatPreg").empty();
+      $.ajax({
+    type:'POST',
+    url:'ajax/traeCatJson.php',
+    dataType:'json',
+    success:function(datos){
+        var val=eval(datos);
+        var con=0;
+        for(var i in val){
+            con++;
+        }
+        
+    var i=0;  
+        while(i<con){ 
+        $("#CatPreg").append("<option value='"+val[i].id+"'>"+val[i].descripcion+"</option>");
+     i++; 
+        }
+        
+    }
+});
+
+$("#temaPreg").empty();
+$.ajax({
+type:'POST',
+url:'ajax/traeTemaJson.php',
+dataType:'json',
+success:function(datos){
+  var val=eval(datos);
+  var con=0;
+  for(var i in val){
+      con++;
+  }
+  
+var i=0;  
+  while(i<con){ 
+  $("#temaPreg").append("<option value='"+val[i].id+"'>"+val[i].descripcion+"</option>");
+i++; 
+  }
+}
+});
+      
+      $("div[class*='rapero']").hide();
+      $(".rapero-preg").show(2000);
+      $(".rP").show();
+      $(".vP").hide();
+    });
+    
+    $("#verT").click(function(){
+      if($(".rapero-tema").hasClass("bg-dark")){
+        $(".rapero-tema").toggleClass("bg-dark");
+      }
+      $("div[class*='rapero']").hide();
+      $(".rapero-tema").show(2000);
+      $(".rT").hide();
+      $(".vT").show();
+      $("#bodyTema").empty();
+      $.ajax({
+    type:'POST',
+    url:'ajax/traeTemaJson.php',
+    dataType:'json',
+    success:function(datos){
+        var val=eval(datos);
+        var con=0;
+        for(var i in val){
+            con++;
+        }
+        
+    var i=0;  
+        while(i<con){ 
+        $("#bodyTema").append("<tr><td>"+val[i].id+"</td><td>"+val[i].descripcion+"</td></tr>");
+     i++; 
+        }
+        $("#tablaTema").DataTable();
+    }
+});
+      
+    });
+    
+    $("#verP").click(function(){
+      if($(".rapero-preg").hasClass("bg-dark")){
+         $(".rapero-preg").toggleClass("bg-dark");
+      }
+      $("div[class*='rapero']").hide();
+      $(".rapero-preg").show(2000);
+      $(".rP").hide();
+      $(".vP").show();
+      $("#bodyPreg").empty();
+      $.ajax({
+    type:'POST',
+    url:'ajax/traePreguntaJson.php',
+    dataType:'json',
+    success:function(datos){
+        var val=eval(datos);
+        var con=0;
+        for(var i in val){
+            con++;
+        }
+        
+    var i=0;  
+        while(i<con){ 
+        $("#bodyPreg").append("<tr><td>"+val[i].id+"</td><td>"+val[i].categoria+"</td><td>"+val[i].tema+"</td><td>"+val[i].descripcion+"</td></tr>");
+     i++; 
+        }
+        $("#tablaProg").DataTable();
+    }
+});
+      
+    });
     
     $("#verU").click(function(){
-      if ($(".rapero-panel").is(":visible")) {
-        $(".rapero-panel").hide();
-        $(".rapero-usu").show(2000);
-      }
+      $("div[class*='rapero']").hide();
+      
+      $(".rapero-usu").show(2000);
       if ($(".ewq").is(":hidden")) {
         $(".ewq").show(2000);
       }
@@ -895,17 +831,214 @@
       
     });
     
-    $("#regU").click(function(){
-      if ($(".rapero-panel").is(":visible")) {
-        $(".rapero-panel").hide();
-        $(".rapero-usu").show(2000);
+    $("#verCat").click(function(){
+      if($(".rapero-cate").hasClass("bg-dark")){
+        $(".rapero-cate").toggleClass("bg-dark");
       }
+      $("div[class*='rapero']").hide();
+      $(".rapero-cate").show(2000);
+      $(".rC").hide();
+      $(".vC").show();
+      $("#bodyCate").empty();
+      $.ajax({
+    type:'POST',
+    url:'ajax/traeCatJson.php',
+    dataType:'json',
+    success:function(datos){
+        var val=eval(datos);
+        var con=0;
+        for(var i in val){
+            con++;
+        }
+        
+    var i=0;  
+        while(i<con){ 
+        $("#bodyCate").append("<tr><td>"+val[i].id+"</td><td>"+val[i].descripcion+"</td></tr>");
+     i++; 
+        }
+        $("#tablaCate").DataTable();
+    }
+});
+      
+    });
+    
+    $("#regCat").click(function(){
+      if(!$(".rapero-cate").hasClass("bg-dark")){
+        $(".rapero-cate").toggleClass("bg-dark");
+      }
+      $("div[class*='rapero']").hide();
+      $(".rapero-cate").show(2000);
+      $(".rC").show();
+      $(".vC").hide();
+      
+    });
+    
+    $("#regU").click(function(){
+      $("div[class*='rapero']").hide();
+      $(".rapero-usu").show(2000);
+      
       if ($(".ewq").is(":visible")) {
         $(".ewq").hide(2000);
       }
       $(".qwe").show(2000);
       
     });
+    
+    $("#impArc").click(function(){
+      $("div[class*='rapero']").hide();
+      $(".rapero-imp").show(2000);
+      
+      $.ajax({
+    type:'POST',
+    url:'ajax/traeCatJson.php',
+    dataType:'json',
+    success:function(datos){
+        var val=eval(datos);
+        var con=0;
+        for(var i in val){
+            con++;
+        }
+        
+    var i=0;  
+        while(i<con){ 
+        $("#SelectCate").append("<option value='"+val[i].id+"'>"+val[i].descripcion+"</option>");
+     i++; 
+        }
+    }
+});  
+      
+      
+      
+    });
+    
+    
+      
+      
+      
+//sobreescribimos el metodo submit para que envie la solicitud por ajax
+$("#form-up").submit(function (e) {
+  $(".car-icon").append('<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i><span class="sr-only">Cargando...</span>');
+  $(".car-alert").append(' <div id="alerta" class="alert alert-primary" role="alert">Cargando datos al sistema!</div>');
+    //esto evita que se haga la petición común, es decir evita que se refresque la pagina
+    e.preventDefault();
+
+    //ruta la cual recibira nuestro archivo
+    //url="@Url.Content("~/Archivo/Recibe")"
+      
+    //FormData es necesario para el envio de archivo, 
+    //y de la siguiente manera capturamos todos los elementos del formulario
+    var parametros=new FormData($(this)[0])
+    
+    //realizamos la petición ajax con la función de jquery
+    $.ajax({
+        type: "POST",
+        url: "cargaDatos.php",
+        data: parametros,
+        contentType: false, //importante enviar este parametro en false
+        processData: false, //importante enviar este parametro en false
+        success: function (data) {
+          $(".car-icon").empty();  
+          $("#alerta").toggleClass("alert-primary alert-success");
+          $("#alerta").text('El archivo ha sido cargado al sistema!');
+        },
+        error: function (r) {
+          $(".car-icon").empty();  
+          $("#alerta").toggleClass("alert-primary alert-danger");
+          $("#alerta").text('No se ha podido cargar datos al sistema!');
+        }
+    });
+
+});
+
+
+$("#formRegCat").submit(function(np){
+  np.preventDefault();
+  var datos={"dds":$("#nomCat").val()};
+  $.ajax({
+      type: "post",
+      url: "ajax/regCat.php",
+      data: datos,
+      dataType:'json',
+      success: function (data) {
+        var val=eval(data);
+        
+          if(val[0].respuesta=="OK"){
+            alert("se ha registrado con exito!!");
+            var bvc=document.getElementById("verCat");
+            bvc.click();
+          }else{
+            alert(val[0].respuesta);
+          }
+        
+      },
+      error: function (r) {
+        alert("No se ha podido registrar categoria!!");
+      }
+  });
+  
+});
+      
+$("#formRegTema").submit(function(np){
+  np.preventDefault();
+  var datos={
+              "dds":$("#temanomCat").val(),
+                    };
+  $.ajax({
+      type: "post",
+      url: "ajax/regTema.php",
+      data: datos,
+      dataType:'json',
+      success: function (data) {
+        var val=eval(data);
+        
+          if(val[0].respuesta=="OK"){
+            alert("se ha registrado con exito!!");
+            var bvc=document.getElementById("verT");
+            bvc.click();
+          }else{
+            alert(val[0].respuesta);
+          }
+        
+      },
+      error: function (r) {
+        alert("No se ha podido registrar categoria!!");
+      }
+  });
+  
+});
+    
+    
+$("#formRegPreg").submit(function(np){
+  np.preventDefault();
+  var datos={
+              "dds":$("#nomPreg").val(),
+              "cates":$("#CatPreg").val(),
+              "tema":$("#temaPreg").val()
+                    };
+  $.ajax({
+      type: "post",
+      url: "ajax/regPregunta.php",
+      data: datos,
+      dataType:'json',
+      success: function (data) {
+        var val=eval(data);
+        
+          if(val[0].respuesta=="OK"){
+            alert("se ha registrado con exito!!");
+            var bvc=document.getElementById("verP");
+            bvc.click();
+          }else{
+            alert(val[0].respuesta);
+          }
+        
+      },
+      error: function (r) {
+        alert("No se ha podido registrar categoria!!");
+      }
+  });
+  
+});
+    
     
   });
   
