@@ -91,10 +91,10 @@
               <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">Respuesta</a>
               <ul class="sidenav-third-level collapse" id="collapseMulti2">
                 <li>
-                  <a href="#">Ver Respuestas</a>
+                  <a href="#" id="verRp">Ver Respuestas</a>
                 </li>
                 <li>
-                  <a href="#">Registrar Respuestas</a>
+                  <a href="#" id="regRp">Registrar Respuestas</a>
                 </li>
               </ul>
             </li>
@@ -137,7 +137,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+      <!--  <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
             <span class="nav-link-text">Example Pages</span>
@@ -156,7 +156,7 @@
               <a href="blank.html">Blank Page</a>
             </li>
           </ul>
-        </li>
+        </li>-->
         
       </ul>
       <ul class="navbar-nav sidenav-toggler">

@@ -41,12 +41,12 @@
       <div class="card card-register mx-auto mt-5">
         <div class="card-header">Registrar Alternativa</div>
         <div class="card-body">
-          <form id="formRegCat">
+          <form id="formRegAlt">
             <div class="form-group">
               <div class="form-row">
-                <div class="col-md-6">
+                <div class="col-md-10">
                   <label for="nomCat">Descripcion Alternativa</label>
-                  <input class="form-control" id="desAlte" name="desAlte" type="text" aria-describedby="nameHelp" placeholder="Nombre" required>
+                  <input class="form-control" id="desAlte" name="desAlte" type="text" aria-describedby="nameHelp" placeholder="Descripcion" required>
                 </div>
                 
               </div>
