@@ -7,6 +7,10 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../css/resulCss.css">
+    <link rel="stylesheet" href="../css/circle.css">
+    <link rel="stylesheet" href="../css/circular.css">
+    <link rel="stylesheet" href="circlejQ/css/jquery.circliful.css">
+    <script src="circlejQ/js/jquery.circliful.min.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
@@ -44,14 +48,43 @@
   </div>
   <div class="panel-body">
     Panel content
+    <div class="row">
+      <div class="c100 p50 big green">
+      <span>50%</span>
+      <div class="slice">
+      <div class="bar"></div>
+      <div class="fill"></div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="progress-circle p10">
+    <span>10%</span>
+    <div class="left-half-clipper">
+      <div class="first50-bar"></div>
+      <div class="value-bar"></div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-lg-2">
+        <div id="test-circle"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2">
+        <div id="your-circle"></div>
+    </div>
+</div>
+
   </div>
 </div>
       </div>
     </div>
   </div>
-  
-  
-  
   
   
 </div>    
@@ -65,3 +98,31 @@
 </div>
   </body>
 </html>
+<script type="text/javascript">
+$( document ).ready(function() {
+  $("#test-circle").circliful({
+    animation: 1,  
+  animationStep: 10,
+  foregroundBorderWidth: 5,
+  backgroundColor: "none",
+  fillColor: '#eee',
+  percent: 75,
+  iconColor: '#3498DB',
+  icon: 'f206',
+  iconSize: '40',
+  iconPosition: 'middle',
+  start:50,
+  showPercent:1,
+  target:0
+}, function(){
+  alert('done !');
+     });
+     $("#your-circle").circliful({
+                 animationStep: 5,
+                 foregroundBorderWidth: 5,
+                 backgroundBorderWidth: 15,
+                 percent: 75
+            }); 
+     
+    });
+</script>

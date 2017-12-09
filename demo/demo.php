@@ -1,6 +1,6 @@
 <?php
 $tipo=$_GET['id'];
-
+echo '<input type="hidden" id="categoria" value="'.$tipo.'"/>';
 if($tipo=="A-I"){
   $veh="M1, M2 y N1";
 }elseif ($tipo=="BII-A") {
@@ -28,7 +28,7 @@ if($tipo=="A-I"){
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
     <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="script/funciones.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/demoCss.css">
@@ -59,23 +59,27 @@ if($tipo=="A-I"){
   </div><!-- /.container-fluid -->
 </nav>
 </header>
+
 <div class="hora container-fluid">
   <div class="frame-hora">
-    <h2 id="timer" align="center">Tiempo Restante: 0:0</h2>
+    <h2 id="timer" align="center">Tiempo Restante: 00:00</h2>
   </div>
 </div>
+
 <br>
 <br>
 <br>
 <br>
-<div class="container panels">
-  <div class="row">
-    <div class="tit col-xs-12 col-sm-12 col-md-8 col-lg-10 col-lg-offset-1">
-      <h4 align="center">EVALUACION DE CONOCIMIENTOS EN LA CONDUCCION PARA
-         POSTULANTES A LICENCIAS DE CONDUCIR DE CLASE <?=$tipo?> (VEHÍCULOS DE LA CATEGORÍA <?=$veh?> )</h4>
+<form class="formPR" action="procesar.php" method="post">
+  <div class="container panels">
+    <div class="row">
+      <div class="tit col-xs-12 col-sm-12 col-md-8 col-lg-10 col-lg-offset-1">
+        <h4 align="center">EVALUACION DE CONOCIMIENTOS EN LA CONDUCCION PARA
+           POSTULANTES A LICENCIAS DE CONDUCIR DE CLASE <?=$tipo?> (VEHÍCULOS DE LA CATEGORÍA <?=$veh?> )</h4>
+      </div>
     </div>
   </div>
-</div>
+</form>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 colsm-12 col-md-4 col-lg-4 col-lg-offset-4 col-md-offset-4 ">
@@ -100,13 +104,9 @@ if($tipo=="A-I"){
   var secs = mins * 60;
   var currentSeconds = 0;
   var currentMinutes = 0;
-window.onload=function(){
-    /* 
-     * The following line has been commented out due to a suggestion left in the comments. The line below it has not been tested. 
-     * setTimeout('Decrement()',1000);
-     */
-    setTimeout(Decrement,1000); 
-}
+/*window.onload=function(){
+     
+}*/
 
   function Decrement() {
       currentMinutes = Math.floor(secs / 60);

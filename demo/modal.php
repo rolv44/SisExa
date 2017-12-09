@@ -32,7 +32,7 @@
           <div class="row">
             
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-lg-offset-2">
-              <h3 >Procesando&hellip;</h3>
+              
               <div class="img-load">
                 
               </div>
@@ -44,7 +44,6 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary ok">Terminar Simulacro</button> 
         
-
       </div>
     </div>
   </div>
