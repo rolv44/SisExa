@@ -120,7 +120,8 @@ $(document).ready(function() {
       
     });
     if(n==numero){
-       setTimeout('$(".formPR").submit()',1000);
+       setTimeout('$(".img-l").hide(),$(".formPR").submit();',1000);
+       
       /*
       var s=JSON.stringify(preguntas);
       var d=JSON.stringify(respuestas);

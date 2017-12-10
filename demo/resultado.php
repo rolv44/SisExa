@@ -62,10 +62,12 @@ for ($i=0; $i < count($listaIdP); $i++) {
   $resultado6=mysqli_query($con,"select r.idAlternativa,r.fundamento,a.desAlternativa from respuesta r inner join pregunta p on p.idPregunta=r.idPregunta inner join alternativa a on a.idAlternativa=r.idAlternativa where p.idPregunta='".$listaIdP[$i]."'")or die(mysqli_error($con)); 
   $as=mysqli_fetch_array($resultado6);
   if($lista[$i]==$as[0]){
-    echo "<script>console.log('".$listaIdP[$i]."--".$lista[$i]."')</script>";
+    //echo "<script>console.log('".$listaIdP[$i]."--".$lista[$i]."')</script>";
     array_push($funda,array("f"=>$as[1],"re"=>'<div class="alert alert-success" role="alert">Correcto! La respuesta es: '.$as[2].'</div>'));
   }else{
-    array_push($funda,array("f"=>$as[1],"re"=>'<div class="alert alert-danger" role="alert">Incorrecto! La respuesta fue: '.$as[2].'</div>'));
+    $ress=mysqli_query($con,"select desAlternativa from alternativa where idAlternativa='".$lista[$i]."'")or die(mysqli_error($con));
+    $df=mysqli_fetch_array($ress);
+    array_push($funda,array("f"=>$as[1],"re"=>'<div class="alert alert-info" role="alert">Tu respuesta fue!  '.$df[0].'</div><div class="alert alert-danger" role="alert">Incorrecto! La respuesta fue: '.$as[2].'</div>'));
   }
   
 }
@@ -171,23 +173,20 @@ echo $listaGrupo[$z]."<br>";
                 <p>Total Correctos: <?= $to?></p>
                 <p>Total Incorrectos: <?= $te?></p>
                 <p><a href="#" id="ver" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal" role="button">Verificar Respuestas</a> </p>
+                <div class="container-fluid img-l">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-lg-offset-4">
+                      
+                      <div class="img-load">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <p><h4>En esta seccion podrá ver las respuestas comentadas por la DGTT</h4></p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-                <div class="car-alert">
-                  
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-                <div class="car-alert">
-                  
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
         
@@ -212,6 +211,7 @@ echo $listaGrupo[$z]."<br>";
 </body>
 </html>
 <script type="text/javascript">
+$(".img-l").hide();
 var fun=<?= json_encode($funda)?>;
 $( document ).ready(function() {
   var ar=<?= json_encode($porcentaje)?>;
@@ -233,13 +233,16 @@ $( document ).ready(function() {
     $("#fila2").append(rr);
   }
   $("#ver").click(function(){
-    $(".car-icon").append('<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i><span class="sr-only">Cargando...</span>');
-    $(".car-alert").append(' <div id="alerta" class="alert alert-primary" role="alert">Cargando datos al sistema!</div>');
+    $(".img-l").toggle();
+  
+    //Añadimos la imagen de carga en el contenedor
+    $('.img-load').html('<img src="../images/lo.gif" height="50" width="50"/>');
     var pre=<?= json_encode($listaIdP)?>;
     for (var g in pre) {
-       traePregunta(pre[g]);
-       
+      traePregunta(pre[g]);
     }
+    numero=0;
+    $(".img-l").toggle();
   });
   
   $("#test-circle").circliful({
@@ -283,40 +286,29 @@ function traePregunta(id) {
       for (var i in val) {
         numero++;
         var h=numero-1;
-        radio = '<div class="form-check">  <label class="form-check-label">' +
-          '<input class="form-check-input" type="radio" name="radiobtn' + String(numero) + '" id="' + val[i].idP + '" value="' +
-          val[i].alternativa[0].idA + '"> ' +
-          val[i].alternativa[0].desAlternativa + '</label></div>' +
-          '<div class="form-check">  <label class="form-check-label">' +
-          '<input class="form-check-input" type="radio" name="radiobtn' + String(numero) + '" id="' + val[i].idP + '" value="' +
-          val[i].alternativa[1].idA + '"> ' +
-          val[i].alternativa[1].desAlternativa + '</label></div>' +
-          '<div class="form-check disabled">  <label class="form-check-label">' +
-          '<input class="form-check-input" type="radio" name="radiobtn' + String(numero) + '" id="' + val[i].idP + '" value="' +
-          val[i].alternativa[2].idA + '"> ' +
-          val[i].alternativa[2].desAlternativa + '</label></div>' +
-          '<div class="form-check">  <label class="form-check-label">' +
-          '<input class="form-check-input" type="radio" name="radiobtn' + String(numero) + '" id="' + val[i].idP + '" value="' +
-          val[i].alternativa[3].idA + '"> ' +
-          val[i].alternativa[3].desAlternativa + '</label></div>';
+        radio = '<ul class="list-unstyled">  <li>' +
+               val[i].alternativa[0].desAlternativa+'</li>' +
+        '<li>' +val[i].alternativa[1].desAlternativa + '</li>' +
+        '<li>' +val[i].alternativa[2].desAlternativa + '</li>' +
+        '<li>' +val[i].alternativa[3].desAlternativa + '</li></ul>';
         
-        ss = '<div class="row fila' + String(numero) + '">' +
-          '<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 ">' +
-          '<div class="panel panel-default"> <div class="panel-heading">' +
-          '<h4 class="panel-title"><strong>' + val[i].tema + ': </strong></h4>' +
-          '</div> <div class="panel-body"><h4>' + numero + '.-' + val[i].pregunta +
-          '</h4><div id="radio' + String(numero) + '">' + radio + '</div><div>'+fun[h].re+'</div><div class="alert alert-info" role="alert">'+fun[h].f+'</div></div> </div>' +
-          '</div><input type="hidden" name="h'+String(numero)+'" value="' + val[i].idP + '"/></div>';
+        ss = '<div class="row fila">' +
+        '<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 ">' +
+        '<div class="panel panel-info"> <div class="panel-heading">' +
+        '<h4 class="panel-title"><strong>' + val[i].tema + ': </strong></h4>' +
+        '</div> <div class="panel-body"><h4>' + numero + '.-' + val[i].pregunta +
+        '</h4><div id="radio">' + radio + '</div><div>'+fun[h].re+'</div><blockquote><p style="font-size:17px">'+fun[h].f+'</p></blockquote></div> </div>' +
+        '</div></div>';
         $(".modalR").append(ss);
-
+        
       }
-
+      
     },
     error: function(xhr, ajaxOptions, thrownError) {
       console.log("Error al conseguir datos: " + ajaxOptions + " " + thrownError);
     }
   });
-
+  
 }
 
 </script>
