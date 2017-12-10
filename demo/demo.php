@@ -70,7 +70,7 @@ if($tipo=="A-I"){
 <br>
 <br>
 <br>
-<form class="formPR" action="procesar.php" method="post">
+<form class="formPR" action="resultado.php" method="post">
   <div class="container panels">
     <div class="row">
       <div class="tit col-xs-12 col-sm-12 col-md-8 col-lg-10 col-lg-offset-1">
