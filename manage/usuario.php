@@ -20,7 +20,7 @@
                   <th>Nombre</th>
                   <th>Apellidos</th>
                   <th>Nombre de Usuario</th>
-                  <th>Estado</th>
+                  <th colspan="3"></th>
                 </tr>
               </thead>
               <tfoot>
@@ -29,7 +29,7 @@
                   <th>Nombre</th>
                   <th>Apellidos</th>
                   <th>Nombre de Usuario</th>
-                  <th>Estado</th>
+                  <th colspan="3"></th>
                 </tr>
               </tfoot>
               <tbody id="bodyUsu">

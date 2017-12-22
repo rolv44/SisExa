@@ -1,8 +1,5 @@
 $(document).ready(function() {
-  /*  $(".img-l").hide();
-  $("h2").click(function() {
-    $(this).hide(3000).show(2000);
-  });  */
+  //$("#inicio").modal('show');
   var numero = 0;
   parametro = {
     "idC": $("#categoria").val()
@@ -27,6 +24,7 @@ $(document).ready(function() {
               op = false;
             }
           }
+          $(".footer").css("margin-top","10px");
         }
       }else if (valu.length<40) {
         
@@ -40,6 +38,7 @@ $(document).ready(function() {
               op = false;
             }
           }
+          $(".footer").css("margin-top","10px");
         }
       }
 
@@ -55,6 +54,7 @@ $(document).ready(function() {
       url: "JsonPhp/traePreguntasAzar.php",
       data: para,
       dataType: 'json',
+      async:false,
       success: function(data1) {
         var val = eval(data1);
         for (var i in val) {
@@ -96,12 +96,33 @@ $(document).ready(function() {
   }
   //procedimiento para actualizar el reloj del examen
   setTimeout(Decrement, 1000);
+  $('#btnl').click(function(){
+    var n=0;
+    var no=0;
+    $(".panels input:radio").each(function(index,ass){
+      if($(this).is(":checked")){
+        n++;
+      }else{
+        no++;
+      }
+    });
+    if(n==numero){
+       $("#mlleno").modal('show');
+    }else{
+      var nue=n*4;
+      var t=(160-nue)/4;
+      $("#sin").text(t);
+      $("#res").text(n);
+      $("#mfalta").modal('show');
+      
+    }
+  });
 
   $('.ok').click(function() {
-
+    
     $(".img-l").show();
     //Añadimos la imagen de carga en el contenedor
-    $('.img-load').html('<h3 >Procesando&hellip;</h3><div><img src="../images/lo.gif" height="50" width="50"/></div>');
+    $('.img-load').html('<div><img src="../images/lo.gif" height="50" width="50"/></div>');
 
     var page = $(this).attr('data');
     var dataString = 'page=' + page;

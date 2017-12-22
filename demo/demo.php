@@ -20,8 +20,6 @@ if($tipo=="A-I"){
 }elseif ($tipo=="BII-C") {
   $veh="L5";
 }
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,6 +58,8 @@ if($tipo=="A-I"){
 </nav>
 </header>
 
+  
+
 <div class="hora container-fluid">
   <div class="frame-hora">
     <h2 id="timer" align="center">Tiempo Restante: 00:00</h2>
@@ -83,7 +83,7 @@ if($tipo=="A-I"){
 <div class="container">
   <div class="row">
     <div class="col-xs-12 colsm-12 col-md-4 col-lg-4 col-lg-offset-4 col-md-offset-4 ">
-      <button class="btn btn-primary btn-block" type="button" name="button" data-toggle="modal" data-target="#mFalta">
+      <button class="btn btn-primary btn-block" type="button" id="btnl" name="button" data-toggle="modal" data-target="">
         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Simulacro Completo</button>
     </div>
   </div>

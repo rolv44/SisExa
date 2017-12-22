@@ -7,6 +7,8 @@ $listaIdP=array();
 $listaGrupo=array();
 $op=true;
 $i=1;
+$porcc=0;
+$eto=0;
 while($op){
   $n="radiobtn".$i;
   $ni="h".$i;
@@ -49,6 +51,8 @@ for($v=0;$v<count($listaGrupo);$v++){
   }
   $te=$te+$error;
   $to=$to+$ok;
+  $porcc=$to;
+  $eto=$te;
   $por=ceil(($ok*100)/$total);
   $resultado2=mysqli_query($con,"select abreviacion as tema, desTema as t from tema where idTema='".$listaGrupo[$v]."'")or die(mysqli_error($con));
   $tr=mysqli_fetch_array($resultado2);
@@ -71,7 +75,8 @@ for ($i=0; $i < count($listaIdP); $i++) {
   }
   
 }
-
+$fecha=date('Y-m-d');
+$resultado7=mysqli_query($con,"insert into resultado values(null,'$porcc','$eto','$fecha')")or die(mysqli_error($con));
 
 /*
 for($j=0;$j<count($listaIdP);$j++){
@@ -238,10 +243,11 @@ $( document ).ready(function() {
     //Añadimos la imagen de carga en el contenedor
     $('.img-load').html('<img src="../images/lo.gif" height="50" width="50"/>');
     var pre=<?= json_encode($listaIdP)?>;
-    for (var g in pre) {
-      traePregunta(pre[g]);
+    if(numero<pre.length){
+      for (var g in pre) {
+        traePregunta(pre[g]);
+      }
     }
-    numero=0;
     $(".img-l").toggle();
   });
   

@@ -115,7 +115,7 @@
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Gráficos">
-          <a class="nav-link" href="graficos.php">
+          <a class="nav-link" id="graf" href="#">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Gráficos</span>
           </a>
@@ -126,12 +126,14 @@
             <span class="nav-link-text">Herramientas</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseUsuarios">
+            <!--
             <li>
               <a href="navbar.php">Navbar</a>
             </li>
             <li>
               <a href="tarjeta.php">Tarjetas</a>
             </li>
+          -->
             <li>
               <a href="#" id="impArc">Importar Archivo</a>
             </li>

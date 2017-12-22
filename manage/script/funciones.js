@@ -5,6 +5,7 @@ $(document).ready(function() {
   $(".rapero-tema").hide();
   $(".rapero-alte").hide();
   $(".rapero-preg").hide();
+  $(".rapero-gra").hide();
   $(".rapero-resp").hide();
   $("#regT").click(function() {
     if (!$(".rapero-tema").hasClass("bg-dark")) {
@@ -35,6 +36,13 @@ $(document).ready(function() {
     $(".rapero-tema").show(2000);
     $(".rT").show();
     $(".vT").hide();
+  });
+  $("#graf").click(function() {
+    $(".bread-cu").hide();
+    $("div[class*='rapero']").hide();
+    $(".rapero-panel").show();
+    $(".rapero-gra").show();
+    
   });
   $("#regP").click(function() {
     if (!$(".rapero-preg").hasClass("bg-dark")) {
@@ -247,7 +255,14 @@ $(document).ready(function() {
         var val = eval(datos);
         var con = 0;
         for (var i in val) {
-          $("#bodyUsu").append("<tr><td>" + val[i].id + "</td><td>" + val[i].nombre + "</td><td>" + val[i].apellido+ "</td><td>" + val[i].usu+ "</td><td>" + val[i].estado+ "</td></tr>");
+          var edi="<td><a type='button' href='#' ><span class='fa fa-pencil-square'></span></a></td>";
+          if(val[i].estado=="ACTIVO"){
+            var desa="<td><a type='button' href='#' ><span class='fa fa-check-square-o'></span></a></td>";
+          }else{
+            var desa="<td><a type='button' href='#' ><span class='fa fa-square-o'></span></a></td>";
+          }
+          var del="<td><a type='button' href='#' ><span class='fa fa-trash-o'></span></a></td>";
+          $("#bodyUsu").append("<tr><td>" + val[i].id + "</td><td>" + val[i].nombre + "</td><td>" + val[i].apellido+ "</td><td>" + val[i].usu+ "</td>"+edi+desa+del+"</tr>");
         }
         $("#tablaUsu0").DataTable();
       }
@@ -499,7 +514,165 @@ $(document).ready(function() {
       }
     });
   });
-  
+  $("#fecha2").change(function(){
+    var f=$("#fecha1").val();
+    var f2=$("#fecha2").val();
+    var parametro = { 
+                                 "fecha1" : f,
+                                  "fecha2" :f2
+                    };
+    
+    $.ajax({
+      type:'POST',
+      url:'ajax/resultadoExam.php',
+      data:parametro,
+      dataType:'json',
+      success:function(dato){
+        var val= eval(dato);
+        var lfecha=new Array();
+        var ids=new Array();
+        var res=new Array();
+        var lv=new Array();
+        var cont=0;
+        var pc=0;
+        for(var j in val){
+          ids.push(val[j].id);
+          res.push(val[j].correctas);
+          var totales=parseInt(val[j].correctas)+parseInt(val[j].fallidas);
+          var por=(parseInt(val[j].correctas)*100)/parseInt(totales);
+          if(por>=70){
+            pc++;
+            alert(pc);
+          }
+          
+          if(lfecha.indexOf(val[j].fecha)==-1){
+            cont=0;
+            lfecha.push(val[j].fecha);
+            for(var k in val){
+              if(val[j].fecha==val[k].fecha){
+                cont++;
+              }
+            }
+            lv.push(cont);
+          }
+        }
+        pc=(pc*100)/parseInt(Object.keys(val).length);
+        
+        $(".lineaG").html("<canvas id='myAreaChart' width='100%' height='30'></canvas>");
+        var ctx = document.getElementById("myAreaChart");
+        var myLineChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: lfecha,
+            datasets: [{
+              label: "Sessions",
+              lineTension: 0.3,
+              backgroundColor: "rgba(2,117,216,0.2)",
+              borderColor: "rgba(2,117,216,1)",
+              pointRadius: 5,
+              pointBackgroundColor: "rgba(2,117,216,1)",
+              pointBorderColor: "rgba(255,255,255,0.8)",
+              pointHoverRadius: 5,
+              pointHoverBackgroundColor: "rgba(2,117,216,1)",
+              pointHitRadius: 20,
+              pointBorderWidth: 2,
+              data: lv,
+            }],
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'date'
+                },
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  maxTicksLimit: 7
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  max: 10,
+                  maxTicksLimit: 5
+                },
+                gridLines: {
+                  color: "rgba(0, 0, 0, .125)",
+                }
+              }],
+            },
+            legend: {
+              display: false
+            }
+          }
+        });
+        // -- Bar Chart Example
+        $(".barraG").html("<canvas id='myBarChart' width='100%' height='50'></canvas>");
+        var ct = document.getElementById("myBarChart");
+        var myLineChart = new Chart(ct, {
+          type: 'bar',
+          data: {
+            labels: ids,
+            datasets: [{
+              label: "Respuestas correctas",
+              backgroundColor: "rgba(2,117,216,1)",
+              borderColor: "rgba(2,117,216,1)",
+              data: res,
+            }],
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'month'
+                },
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  maxTicksLimit: 6
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  max: 100,
+                  maxTicksLimit: 5
+                },
+                gridLines: {
+                  display: true
+                }
+              }],
+            },
+            legend: {
+              display: false
+            }
+          }
+        });
+        // -- Pie Chart Example
+        $(".pieG").html("<canvas id='myPieChart' width='70%' height='70%'></canvas>");
+        var ctx = document.getElementById("myPieChart");
+        var myPieChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ["Aprobados", "Desaprobados"],
+            datasets: [{
+              data: [pc, (100-pc)],
+              backgroundColor: ['#007bff', '#dc3545'],
+            }],
+          },
+        });
+      },
+      error:function(){alert("No se ha podido obtener los datos de los examenes");}
+    });
+  });
      
   //fin de funciones
 });
+function formatear(fecha){
+        var d=fecha.split("-");
+        var f=d[2]+"-"+d[1]+"-"+d[0];
+        return f;
+    }

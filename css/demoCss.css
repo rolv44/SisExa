@@ -5,8 +5,9 @@
   background-position: center;
   background-attachment: fixed;
   height: 100%;
+  
   }
-
+  
   .sheet {
   position: relative;
   top: 90px;
@@ -48,6 +49,7 @@
   background: #333;
   border-top: 1px solid #000;
   position: relative;
+  margin-top: 250px;
   }
 
   .hora {

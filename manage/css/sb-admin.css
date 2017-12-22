@@ -62,6 +62,7 @@ body.fixed-nav {
     cursor: pointer; }
   #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
     float: right;
+    
     content: '\f107';
     font-family: 'FontAwesome'; }
   #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after {

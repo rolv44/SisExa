@@ -62,26 +62,26 @@
               <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-lg-offset-2">
                       <div class="btn-toolbar" role="toolbar" aria-label="...">
-                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-11 btnc">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-12 btnc">
                 <div class="btn-group" role="group" aria-label="...">
-                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria A-I',1)" data-toggle="modal" data-target="#adv1">Categoria A-I</button>
-                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-A',2)" data-toggle="modal" data-target="#adv1">Categoria BII-A</button>
-                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-B',3)" data-toggle="modal" data-target="#adv1">Categoria BII-B</button>
-                  <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AII-A',4)" data-toggle="modal" data-target="#adv1">Categoria AII-A</button>
+                  <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria A-I',1)" data-toggle="modal" data-target="#adv1">Categoria A-I</button>
+                  <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria BII-A',2)" data-toggle="modal" data-target="#adv1">Categoria BII-A</button>
+                  <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria BII-B',3)" data-toggle="modal" data-target="#adv1">Categoria BII-B</button>
+                  <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria AII-A',4)" data-toggle="modal" data-target="#adv1">Categoria AII-A</button>
                 </div>
                 </div>
                 <br>
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-11 btnc">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-12 btnc">
                   <div class="btn-group" role="group" aria-label="...">
-                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AII-B',5)" data-toggle="modal" data-target="#adv1">Categoria AII-B</button>
-                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-A',6)" data-toggle="modal" data-target="#adv1">Categoria AIII-A</button>
-                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-B',7)" data-toggle="modal" data-target="#adv1">Categoria AIII-B</button>
-                    <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria AIII-C',8)" data-toggle="modal" data-target="#adv1">Categoria AIII-C</button>
+                    <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria AII-B',5)" data-toggle="modal" data-target="#adv1">Categoria AII-B</button>
+                    <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria AIII-A',6)" data-toggle="modal" data-target="#adv1">Categoria AIII-A</button>
+                    <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria AIII-B',7)" data-toggle="modal" data-target="#adv1">Categoria AIII-B</button>
+                    <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria AIII-C',8)" data-toggle="modal" data-target="#adv1">Categoria AIII-C</button>
                   </div>
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-11 btnc">
                     <div class="btn-group" role="group" aria-label="...">
-                      <button type="button" name="button" class="btn btn-info" onclick="tipoEx('Categoria BII-C',9)" data-toggle="modal" data-target="#adv1">Categoria BII-C</button>
+                      <button type="button" name="button" style="width:130px" class="btn btn-info" onclick="tipoEx('Categoria BII-C',9)" data-toggle="modal" data-target="#adv1">Categoria BII-C</button>
                     
                 </div>
               </div>
