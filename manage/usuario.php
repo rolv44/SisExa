@@ -100,6 +100,87 @@
         </div>
       </div>
     
-    
   </div>
+  <!-- Button trigger modal -->
+  <input type="hidden" value="" id="campIdUs" />
+  <input type="hidden" value="" id="campCUs" />
+  <input type="hidden" value="" id="campTabUs" />
+  <!-- Modal -->
+  <div class="modal fade" id="elimUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Desea eliminar este Usuario?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" id="btnAcpUs" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="desUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cambiar estado Usuario</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Desea cambiar el estado de este Usuario?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" id="btnDsUs" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade " id="editUs" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myLargeModalLabel">Editar Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-10">
+              <label for="nomCat">Nombre</label>
+              <input class="form-control" id="nomEdUs" name="nomEdUs" type="text" aria-describedby="nameHelp" placeholder="Nombre" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-10">
+              <label for="nomCat">Apellidos</label>
+              <input class="form-control" id="apeEdUs" name="apeEdUs" type="text" aria-describedby="nameHelp" placeholder="Apellidos" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-10">
+              <label for="nomCat">Nombre de Usuario</label>
+              <input class="form-control" id="nomUsEdUs" name="nomUsEdUs" type="text" aria-describedby="nameHelp" placeholder="Apellidos" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" id="btnEdUs" class="btn btn-primary">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
   

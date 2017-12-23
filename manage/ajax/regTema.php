@@ -3,11 +3,12 @@ include"../conexion.php";
 $cn=new conexion();
 $con=$cn->conectar();
 $des=$_POST['dds'];
+$av=$_POST['avv'];
 $query1=mysqli_query($con,"select trae_id_tema() as ID ")or die(mysqli_error($con));
 $rsCat=mysqli_fetch_array($query1);
 $idtema=$rsCat['ID'];
 $resultado=array();
- $query2=mysqli_query($con,"insert into tema values('$idtema','$des')")or die(mysqli_error($con));
+ $query2=mysqli_query($con,"insert into tema values('$idtema','$des','$av')")or die(mysqli_error($con));
 if($query2){
   array_push($resultado,array("respuesta"=>"OK"));
   echo json_encode($resultado);

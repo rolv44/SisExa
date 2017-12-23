@@ -153,7 +153,7 @@ $(document).ready(function() {
         var val = eval(datos);
         var con = 0;
         for (var i in val) {
-          $("#bodyAlte").append("<tr><td>" + val[i].id + "</td><td>" + val[i].descripcion + "</td></tr>");
+          $("#bodyAlte").append("<tr><td>" + val[i].id + "</td><td>" + val[i].descripcion + "</td><td><label data-toggle='modal' data-target='#editAl' ><i class='fa fa-pencil-square-o' aria-hidden='true'></i></label></td><td><label onclick='setAl("+val[i].id+",\"idAlternativa\",\"alternativa\");' data-toggle='modal' data-target='#elimAl' ><i class='fa fa-trash-o' aria-hidden='true'></i></label></td></tr>");
         }
         $("#tablaAlte").DataTable();
       }
@@ -176,7 +176,7 @@ $(document).ready(function() {
         var val = eval(datos);
         var con = 0;
         for (var i in val) {
-          $("#bodyResp").append("<tr><td>" + val[i].id + "</td><td>" + val[i].pregunta + "</td><td>" + val[i].alternativa + "</td><td>" + val[i].fundamento + "</td></tr>");
+          $("#bodyResp").append("<tr><td>" + val[i].id + "</td><td>" + val[i].pregunta + "</td><td>" + val[i].alternativa + "</td><td>" + val[i].fundamento + "</td><td><label onclick='reEdiRe();' data-toggle='modal' data-target='#editRe' ><i class='fa fa-pencil-square-o' aria-hidden='true'></i></label></td><td><label onclick='setRe("+val[i].id+",\"idRespuesta\",\"respuesta\");' data-toggle='modal' data-target='#elimRe' ><i class='fa fa-trash-o' aria-hidden='true'></i></label></td></tr>");
         }
         $("#tablaResp").DataTable();
       }
@@ -203,7 +203,7 @@ $(document).ready(function() {
         }
         var i = 0;
         while (i < con) {
-          $("#bodyTema").append("<tr><td>" + val[i].id + "</td><td>" + val[i].descripcion + "</td></tr>");
+          $("#bodyTema").append("<tr><td>" + val[i].id + "</td><td>" + val[i].descripcion + "</td><td><label data-toggle='modal' data-target='#editTe'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></label></td><td><label onclick='settem("+val[i].id+",\"idTema\",\"tema\");' data-toggle='modal' data-target='#elimTema' ><i class='fa fa-trash-o' aria-hidden='true'></i></label></td></tr>");
           i++;
         }
         $("#tablaTema").DataTable();
@@ -231,7 +231,7 @@ $(document).ready(function() {
         }
         var i = 0;
         while (i < con) {
-          $("#bodyPreg").append("<tr><td>" + val[i].id + "</td><td>" + val[i].categoria + "</td><td>" + val[i].tema + "</td><td>" + val[i].descripcion + "</td></tr>");
+          $("#bodyPreg").append("<tr><td>" + val[i].id + "</td><td>" + val[i].categoria + "</td><td>" + val[i].tema + "</td><td>" + val[i].descripcion + "</td><td><label onclick='reEdiPr();' data-toggle='modal' data-target='#editPr'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></label></td><td><label onclick='setpre("+val[i].id+",\"idPregunta\",\"pregunta\");' data-toggle='modal' data-target='#elimPre' ><i class='fa fa-trash-o' aria-hidden='true'></i></label></td></tr>");
           i++;
         }
         $("#tablaPreg").DataTable();
@@ -255,13 +255,13 @@ $(document).ready(function() {
         var val = eval(datos);
         var con = 0;
         for (var i in val) {
-          var edi="<td><a type='button' href='#' ><span class='fa fa-pencil-square'></span></a></td>";
+          var edi="<td><label data-toggle='modal' data-target='#editUs'><span class='fa fa-pencil-square'></span></label></td>";
           if(val[i].estado=="ACTIVO"){
-            var desa="<td><a type='button' href='#' ><span class='fa fa-check-square-o'></span></a></td>";
+            var desa="<td><label onclick='setUs("+val[i].id+",0,\"usuario\");' data-toggle='modal' data-target='#desUs' ><span class='fa fa-check-square-o'></span></label></td>";
           }else{
-            var desa="<td><a type='button' href='#' ><span class='fa fa-square-o'></span></a></td>";
+            var desa="<td><label onclick='setUs("+val[i].id+",1,\"usuario\");' data-toggle='modal' data-target='#desUs' ><span class='fa fa-square-o'></span></label></td>";
           }
-          var del="<td><a type='button' href='#' ><span class='fa fa-trash-o'></span></a></td>";
+          var del="<td><label onclick='setUs("+val[i].id+",\"idUsuario\",\"usuario\");' data-toggle='modal' data-target='#elimUs' ><span class='fa fa-trash-o'></span></label></td>";
           $("#bodyUsu").append("<tr><td>" + val[i].id + "</td><td>" + val[i].nombre + "</td><td>" + val[i].apellido+ "</td><td>" + val[i].usu+ "</td>"+edi+desa+del+"</tr>");
         }
         $("#tablaUsu0").DataTable();
@@ -285,7 +285,7 @@ $(document).ready(function() {
         var val = eval(datos);
         var con = 0;
         for (var i in val) {
-          $("#bodyCate").append("<tr><td>" + val[i].id + "</td><td>" + val[i].descripcion + "</td></tr>");
+          $("#bodyCate").append("<tr><td>" + val[i].id + "</td><td>" + val[i].descripcion + "</td><td><label data-toggle='modal' data-target='#editCa'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></label></td><td><label onclick='setF("+val[i].id+",\"idCategoria\",\"categoria\");' data-toggle='modal' data-target='#elimCat' ><i class='fa fa-trash-o' aria-hidden='true'></i></label></td></tr>");
         }
         $("#tablaCate").DataTable();
       }
@@ -385,6 +385,7 @@ $(document).ready(function() {
     np.preventDefault();
     var datos = {
       "dds": $("#temanomCat").val(),
+      "avv": $("#temaavCat").val()
     };
     $.ajax({
       type: "post",
@@ -402,7 +403,7 @@ $(document).ready(function() {
         }
       },
       error: function(r) {
-        alert("No se ha podido registrar categoria!!");
+        alert("No se ha podido registrar tema!!");
       }
     });
   });
@@ -668,7 +669,60 @@ $(document).ready(function() {
       error:function(){alert("No se ha podido obtener los datos de los examenes");}
     });
   });
-     
+  $("#btnAcpE").click(function(){
+    var para={"id":$("#campoId").val(),"campo":$("#campoC").val(),"tabla":$("#campoTab").val()};
+    eliminarJ(para,'elimCat');
+    $("#verCat").click();
+  });   
+  $("#btnAcpTe").click(function(){
+    var para={"id":$("#campoIdTe").val(),"campo":$("#campoCTe").val(),"tabla":$("#campoTabTe").val()};
+    eliminarJ(para,'elimTema');
+    $("#verT").click();
+  }); 
+  $("#btnAcpPr").click(function(){
+    var para={"id":$("#campoIdPr").val(),"campo":$("#campoCPr").val(),"tabla":$("#campoTabPr").val()};
+    eliminarJ(para,'elimPre');
+    $("#verP").click();
+  }); 
+  $("#btnAcpAl").click(function(){
+    var para={"id":$("#campIdAlt").val(),"campo":$("#campCAlt").val(),"tabla":$("#campTabAlt").val()};
+    eliminarJ(para,'elimAl');
+    $("#verA").click();
+  }); 
+  $("#btnAcpRe").click(function(){
+    var para={"id":$("#campIdRe").val(),"campo":$("#campCRe").val(),"tabla":$("#campTabRe").val()};
+    eliminarJ(para,'elimRe');
+    $("#verA").click();
+  });
+  $("#btnAcpUs").click(function(){
+    var para={"id":$("#campIdUs").val(),"campo":$("#campCUs").val(),"tabla":$("#campTabUs").val()};
+    eliminarJ(para,'elimUs');
+    $("#verU").click();
+  });
+  $("#btnDsUs").click(function(){
+    var para={"id":$("#campIdUs").val(),"campo":$("#campCUs").val(),"tabla":$("#campTabUs").val()};
+    $.ajax({
+      type: "post",
+      url: "ajax/desUsuJson.php",
+      data: para,
+      dataType: 'json',
+      success: function(data) {
+        var val = eval(data);
+        if (val[0].respuesta == "OK") {
+          $('#desUs').modal('toggle');
+          //alert("se ha eliminado con exito!!");
+        } else {
+          $('#desUs').modal('toggle');
+          //alert(val[0].respuesta);
+        }
+      },
+      error: function(r) {
+        $('#elimCat').modal('toggle');
+        alert("No se ha podido registrar categoria!!");
+      }
+    });
+    $("#verU").click();
+  });
   //fin de funciones
 });
 function formatear(fecha){
@@ -676,3 +730,123 @@ function formatear(fecha){
         var f=d[2]+"-"+d[1]+"-"+d[0];
         return f;
     }
+function setF(x,i,t){
+  document.getElementById("campoId").value=x;
+  document.getElementById("campoC").value=i;
+  document.getElementById("campoTab").value=t;
+}
+function settem(x,i,t){
+  document.getElementById("campoIdTe").value=x;
+  document.getElementById("campoCTe").value=i;
+  document.getElementById("campoTabTe").value=t;
+}
+function setpre(x,i,t){
+  document.getElementById("campoIdPr").value=x;
+  document.getElementById("campoCPr").value=i;
+  document.getElementById("campoTabPr").value=t;
+}
+function setAl(x,i,t){
+  document.getElementById("campIdAlt").value=x;
+  document.getElementById("campCAlt").value=i;
+  document.getElementById("campTabAlt").value=t;
+}
+function setRe(x,i,t){
+  document.getElementById("campIdRe").value=x;
+  document.getElementById("campCRe").value=i;
+  document.getElementById("campTabRe").value=t;
+}
+function setUs(x,i,t){
+  document.getElementById("campIdUs").value=x;
+  document.getElementById("campCUs").value=i;
+  document.getElementById("campTabUs").value=t;
+}
+function eliminarJ(para,p){
+  $.ajax({
+    type: "post",
+    url: "ajax/eliminarJson.php",
+    data: para,
+    dataType: 'json',
+    success: function(data) {
+      var val = eval(data);
+      if (val[0].respuesta == "OK") {
+        $('#'+p+'').modal('toggle');
+        //alert("se ha eliminado con exito!!");
+      } else {
+        $('#'+p+'').modal('toggle');
+        //alert(val[0].respuesta);
+      }
+    },
+    error: function(r) {
+      $('#elimCat').modal('toggle');
+      alert("No se ha podido registrar categoria!!");
+    }
+  });
+}
+function reEdiPr(){
+  $("#CatPregEd").empty();
+  $.ajax({
+    type: 'POST',
+    url: 'ajax/traeCatJson.php',
+    dataType: 'json',
+    success: function(datos) {
+      var val = eval(datos);
+      var con = 0;
+      for (var i in val) {
+        con++;
+      }
+      var i = 0;
+      while (i < con) {
+        $("#CatPregEd").append("<option value='" + val[i].id + "'>" + val[i].descripcion + "</option>");
+        i++;
+      }
+    }
+  });
+  $("#temaPregEd").empty();
+  $.ajax({
+    type: 'POST',
+    url: 'ajax/traeTemaJson.php',
+    dataType: 'json',
+    success: function(datos) {
+      var val = eval(datos);
+      var con = 0;
+      for (var i in val) {
+        con++;
+      }
+      var i = 0;
+      while (i < con) {
+        $("#temaPregEd").append("<option value='" + val[i].id + "'>" + val[i].descripcion + "</option>");
+        i++;
+      }
+    }
+  });
+}
+
+function reEdiRe(){
+  $("#codPregEd").empty();
+  $.ajax({
+    type: 'POST',
+    url: 'ajax/traeCodJson.php',
+    dataType: 'json',
+    success: function(datos) {
+      var val = eval(datos);
+      var con = 0;
+      for (var i in val) {
+        $("#codPregEd").append("<option value='" + val[i].id + "'>" + val[i].id + "</option>");
+      }
+      
+    }
+  });
+  $("#altRespEd").empty();
+  $.ajax({
+    type: 'POST',
+    url: 'ajax/traeAlternativaJson.php',
+    dataType: 'json',
+    success: function(datos) {
+      var val = eval(datos);
+      var con = 0;
+      for (var i in val) {
+        $("#altRespEd").append("<option value='" + val[i].id + "'>" + val[i].id+ "</option>");
+      }
+    }
+  });
+}
